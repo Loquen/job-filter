@@ -1,0 +1,29 @@
+/*
+
+- Desaturated Dark Cyan: 
+
+### Neutral
+
+- Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+- Dark Grayish Cyan: hsl(180, 8%, 52%)
+- Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+$dark-cyan: hsl(180, 29%, 50%);
+$background-cyan: hsl(180, 52%, 96%);
+$filter-cyan: hsl(180, 31%, 95%);
+$darker-cyan: hsl(180, 8%, 52%);
+$darkest-cyan: hsl(180, 14%, 20%);
+
+.App {
+  text-align: center;
+  font-family: 'Spartan', sans-serif;
+}
+
+.NavBar {
+  background-color: $dark-cyan;
+  height: 150px;
+}

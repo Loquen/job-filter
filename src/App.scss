@@ -13,7 +13,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
 
 $dark-cyan: hsl(180, 29%, 50%);
-$background-cyan: hsl(180, 52%, 96%);
+$background-cyan: hsl(180, 100%, 94%);
 $filter-cyan: hsl(180, 31%, 95%);
 $darker-cyan: hsl(180, 8%, 52%);
 $darkest-cyan: hsl(180, 14%, 20%);
@@ -21,9 +21,52 @@ $darkest-cyan: hsl(180, 14%, 20%);
 .App {
   text-align: center;
   font-family: 'Spartan', sans-serif;
+  background-color: $background-cyan;
 }
 
 .NavBar {
   background-color: $dark-cyan;
   height: 150px;
+}
+
+.job-list {
+  width: 90%;
+  margin: auto;
+}
+
+.job {
+  padding: 20px;
+  margin: 30px auto;
+  text-align: left;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba( $dark-cyan, .5 )
+  ;
+
+  .company {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    .title {
+      color: $dark-cyan;
+    }
+
+    .new, .feature {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 12px;
+      color: $filter-cyan;
+      border-radius: 20px;
+      padding: 10px;
+      margin: 0 10px;
+    }
+    .new {
+      background-color: $dark-cyan;
+    }
+
+    .feature {
+      background-color: $darkest-cyan;
+    }
+  }
 }

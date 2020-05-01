@@ -1,7 +1,7 @@
 import React from 'react';
 import Job from './Job';
 
-function JobList({jobs, addFilterItem}) {
+function JobList({jobs, handleFilter}) {
   return (
     <div className='job-list'>
       { jobs.map(job => 
@@ -19,7 +19,7 @@ function JobList({jobs, addFilterItem}) {
           location={job.location}
           languages={job.languages ? job.languages : []}
           tools={job.tools ? job.tools : []}
-          addFilterItem={addFilterItem}
+          handleFilter={handleFilter}
         />
       )}
     </div>

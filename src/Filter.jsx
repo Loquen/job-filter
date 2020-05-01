@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Filter({filterList}) {
+function Filter({filterList, handleFilter}) {
   let filterArray = [];
   if(filterList.size > 0){
     filterList.forEach((item, key) => {
@@ -9,7 +9,10 @@ function Filter({filterList}) {
           <div className='item-name'>
             {item}
           </div>
-          <div className='remove-item'>
+          <div 
+            className='remove-item'
+            onClick={(e) => handleFilter(e, item, 'remove')}
+          >
             <img src='/icon-remove.svg' alt='Remove Item'/>
           </div>
         </div>
@@ -18,7 +21,18 @@ function Filter({filterList}) {
   
   return (
     <div className='filter-bar'>
-      {filterArray.map(item => (item))}
+      <div className="filter-list">
+        {filterArray.map(item => (item))}
+        {filterArray.length > 0 
+          ? <div 
+              className="clear-filter"
+              onClick={(e) => handleFilter(e, '', '')}
+            >
+                Clear
+            </div>
+          : ''
+        }
+      </div>
     </div>
   );
 }

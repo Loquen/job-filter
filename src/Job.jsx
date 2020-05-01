@@ -3,7 +3,7 @@ import React from 'react';
 function Job({
   company, url, newJob, featured, position,
   role, level, postedAt, contract, location,
-  languages, tools, addFilterItem
+  languages, tools, handleFilter
 }) {
   let filters = [role, level, ...languages, ...tools];
   return (
@@ -32,7 +32,7 @@ function Job({
           <div 
             key={key} 
             className='filter-option'
-            onClick={(e) => addFilterItem(e, item)}
+            onClick={(e) => handleFilter(e, item, 'add')}
           >
             {item}
           </div>

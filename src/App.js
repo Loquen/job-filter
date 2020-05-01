@@ -9,9 +9,17 @@ function App() {
   const [jobs, setJobs] = useState(data);
   const [filterList, setFilterList] = useState(new Set());
 
-  const addFilterItem = (e, item) => {
+  const handleFilter = (e, item, action) => {
     let currentFilter = new Set(filterList);
-    currentFilter.add(item);
+
+    if(action === 'remove'){
+      currentFilter.delete(item);
+    } else if(action === 'add'){
+      currentFilter.add(item);
+    } else {
+      currentFilter.clear();
+    }
+
     setFilterList(currentFilter);
   }
 
@@ -19,10 +27,11 @@ function App() {
     <div className="App">
       <Filter
         filterList={filterList}
+        handleFilter={handleFilter}
       />
       <JobList 
         jobs={jobs}
-        addFilterItem={addFilterItem}
+        handleFilter={handleFilter}
       />
     </div>
   );

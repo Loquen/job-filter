@@ -28,6 +28,54 @@ $darkest-cyan: hsl(180, 14%, 20%);
   background-color: $dark-cyan;
   background-image: url('/bg-header-mobile.svg');
   height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .filter-list {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+
+    .filter-item {
+      background-color: $filter-cyan;
+      color: $dark-cyan;
+      font-weight: 700;
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .item-name {
+        padding: 6px;
+      }
+      .remove-item {
+        background-color: $dark-cyan;
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .remove-item:hover {
+        background-color: $darkest-cyan;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  .clear-filter {
+    color: $dark-cyan;
+    margin: auto 5px;
+
+  }
+
+  .clear-filter:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .job-list {

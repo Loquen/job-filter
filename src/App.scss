@@ -26,6 +26,7 @@ $darkest-cyan: hsl(180, 14%, 20%);
 
 .NavBar {
   background-color: $dark-cyan;
+  background-image: url('/bg-header-mobile.svg');
   height: 150px;
 }
 
@@ -34,14 +35,17 @@ $darkest-cyan: hsl(180, 14%, 20%);
   margin: auto;
 }
 
+.feat {
+  border-left: 4px solid $dark-cyan;
+}
+
 .job {
-  padding: 20px;
-  margin: 30px auto;
+  padding:20px;
+  margin: 60px auto;
   text-align: left;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba( $dark-cyan, .5 )
-  ;
+  box-shadow: 0 5px 10px rgba( $dark-cyan, .5 );
 
   .company {
     display: flex;
@@ -50,6 +54,11 @@ $darkest-cyan: hsl(180, 14%, 20%);
 
     .title {
       color: $dark-cyan;
+      font-weight: 700;
+    }
+
+    .hide {
+      display: none;
     }
 
     .new, .feature {
@@ -61,12 +70,67 @@ $darkest-cyan: hsl(180, 14%, 20%);
       padding: 10px;
       margin: 0 10px;
     }
+
     .new {
       background-color: $dark-cyan;
     }
 
     .feature {
       background-color: $darkest-cyan;
+    }
+  }
+
+  .position {
+    margin: 10px;
+    font-weight: 700;
+  }
+
+  .position:hover {
+    color: $dark-cyan;
+    cursor: pointer;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    
+    .element {
+      color: $darker-cyan;
+
+    }
+    .dot {
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      margin: 0 5px;
+      background-color: $darker-cyan;
+    }
+  }
+
+  hr {
+    margin: 10px;
+    border: 1px solid $darker-cyan;
+  }
+
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 5px;
+
+    .filter-option {
+      font-weight: 700;
+      padding: 10px;
+      margin: 5px;
+      color: $dark-cyan;
+      background-color: $filter-cyan;
+      border-radius: 5px;
+    }
+
+    .filter-option:hover {
+      background-color: $dark-cyan;
+      color: $filter-cyan;
+      cursor: pointer;
     }
   }
 }

@@ -7,28 +7,33 @@ function Job({
 }) {
   let filters = [role, level, ...languages, ...tools];
   return (
-    <div className='job'>
+    <div className={`job ${featured ? 'feat' : ''}`}>
       <div className='logo'>
         <img src={url} alt={`${company} logo`}/>
       </div>
       <div className='company'>
         <div className='title'>{company}</div>
-        <div className='new'>New!</div>
-        <div className='feature'>Featured</div>
+        <div className={newJob ? 'new' : 'hide'}>New!</div>
+        <div className={featured ? 'feature' : 'hide'}>Featured</div>
       </div>
       <div className='position'>
         {position}
       </div>
       <div className='about'>
-        <div className='time'>{postedAt}</div>
-        <div className='type'>{contract}</div>
-        <div className='location'>{location}</div>
+        <div className='element'>{postedAt}</div>
+        <div className='dot'></div>
+        <div className='element'>{contract}</div>
+        <div className='dot'></div>
+        <div className='element'>{location}</div>
       </div>
-      {filters.map((item, key) => 
-        <div key={key} className='filter-option'>
-          {item}
-        </div>
+      <hr/>
+      <div className='filter'>
+        {filters.map((item, key) => 
+          <div key={key} className='filter-option'>
+            {item}
+          </div>
         )}
+      </div>
     </div>
   );
 }

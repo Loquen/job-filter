@@ -1,8 +1,24 @@
 import React from 'react';
 
-function Filter(props) {
+function Filter({filterList}) {
+  let filterArray = [];
+  if(filterList.size > 0){
+    filterList.forEach((item, key) => {
+      filterArray.push(
+        <div key={key} className='filter-item'>
+          <div className='item-name'>
+            {item}
+          </div>
+          <div className='remove-item'>
+            <img src='/icon-remove.svg' alt='Remove Item'/>
+          </div>
+        </div>
+    )});
+  }
+  
   return (
-    <div className='Filter'>
+    <div className='filter-bar'>
+      {filterArray.map(item => (item))}
     </div>
   );
 }

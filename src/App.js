@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     if(filterList.size > 0) {
       const filteredJobs = [];  
-      jobs.forEach(job => {
+      data.forEach(job => {
         job.tools = job.tools ? job.tools : [];
         job.languages = job.languages ? job.languages : [];
         let optionsList = [

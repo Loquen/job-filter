@@ -8,23 +8,27 @@ function Job({
   let filters = [role, level, ...languages, ...tools];
   return (
     <div className={`job ${featured ? 'feat' : ''}`}>
-      <div className='logo'>
-        <img src={url} alt={`${company} logo`}/>
-      </div>
-      <div className='company'>
-        <div className='title'>{company}</div>
-        <div className={newJob ? 'new' : 'hide'}>New!</div>
-        <div className={featured ? 'feature' : 'hide'}>Featured</div>
-      </div>
-      <div className='position'>
-        {position}
-      </div>
-      <div className='about'>
-        <div className='element'>{postedAt}</div>
-        <div className='dot'></div>
-        <div className='element'>{contract}</div>
-        <div className='dot'></div>
-        <div className='element'>{location}</div>
+      <div className="job-container">
+        <div className='logo'>
+          <img src={url} alt={`${company} logo`}/>
+        </div>
+        <div className="job-info">
+          <div className='company'>
+            <div className='title'>{company}</div>
+            <div className={newJob ? 'new' : 'hide'}>New!</div>
+            <div className={featured ? 'feature' : 'hide'}>Featured</div>
+          </div>
+          <div className='position'>
+            {position}
+          </div>
+          <div className='about'>
+            <div className='element'>{postedAt}</div>
+            <div className='dot'></div>
+            <div className='element'>{contract}</div>
+            <div className='dot'></div>
+            <div className='element'>{location}</div>
+          </div>
+        </div>
       </div>
       <hr/>
       <div className='filter'>
@@ -38,6 +42,7 @@ function Job({
           </div>
         )}
       </div>
+    
     </div>
   );
 }

@@ -18,6 +18,8 @@ $filter-cyan: hsl(180, 31%, 95%);
 $darker-cyan: hsl(180, 8%, 52%);
 $darkest-cyan: hsl(180, 14%, 20%);
 
+$small-screen: 650px;
+
 .App {
   text-align: center;
   font-family: 'Spartan', sans-serif;
@@ -179,6 +181,32 @@ $darkest-cyan: hsl(180, 14%, 20%);
       background-color: $dark-cyan;
       color: $filter-cyan;
       cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (min-width: $small-screen) {
+  .job {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    
+    .job-container {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        padding: 0 30px;
+      }
+
+      .dot {
+        margin: 0 20px;
+      }
+    }
+
+    hr {
+      display: none;
     }
   }
 }
